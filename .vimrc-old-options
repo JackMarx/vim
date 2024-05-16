@@ -1,0 +1,116 @@
+" ----------------------- old options --------------------------
+
+" restrict movements
+" nnoremap <xUp> <nop>
+" nnoremap <xDown> <nop>
+" nnoremap <xLeft> <nop>
+" nnoremap <xRight> <nop>
+
+" settings
+" set expandtab
+
+" set textwidth=80
+" - use gq in visual mode to reformat text length
+
+" email signature
+" iabbrev ssig -- <cr>Josh Nixon<cr>josh@thaneanimation.com
+
+" set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
+
+" indentation
+" set autoindent " always set autoindenting on
+
+" autosaving
+" set autowrite
+" autocmd BufNewFile *.txt write
+
+" window placements
+" set splitright
+" set splitbelow
+
+" Set the tag file search order
+" set tags=./tags;
+
+" set laststatus=2
+" status line
+" function! GitBranch()
+  " return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+" endfunction
+
+" function! StatuslineGit()
+  " let l:branchname = GitBranch()
+  " return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+" endfunction
+
+" set statusline=
+" set statusline+=%#PmenuSel#
+" set statusline+=%{StatuslineGit()}
+" set statusline+=%#LineNr#
+" set statusline+=\ %f
+" set statusline+=%m\
+" set statusline+=%=
+" set statusline+=%#CursorColumn#
+" set statusline+=\ %y
+" set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+" set statusline+=\[%{&fileformat}\]
+" set statusline+=\ %p%%
+" set statusline+=\ %l:%c
+" set statusline+=\ 
+
+" folding
+" zo - opens folds
+" zc - closes fold
+" zm - increases auto fold depth
+" zr - reduces auto fold depth
+" zR - stop folds
+" set foldmethod=indent
+" set foldlevel=20
+" set foldclose=all
+
+" netrw settings
+" nnoremap <leader>ex :Lexplore<cr>
+" let g:netrw_banner = 0
+" let g:netrw_liststyle = 3
+" let g:netrw_preview = 1
+" let g:netrw_browse_split = 4
+" let g:netrw_altv = 1
+" let g:netrw_winsize = 25
+"  augroup ProjectDrawer
+    "  autocmd!
+    "  autocmd VimEnter * :Vexplore
+"  augroup END
+
+" html config
+" augroup filetype_html
+    " autocmd!
+    " autocmd BufWritePre *.html :normal gg=G
+    " autocmd BufNewFile,BufRead *.html setlocal nowrap
+    " autocmd Filetype html nnoremap <buffer> <localleader>f Vatzf
+" augroup END
+
+" javascript config
+" augroup filetype_js
+    " autocmd!
+    " autocmd FileType javascript nnoremap <buffer> <localleader>c I// <esc>
+    " autocmd FileType javascript nnoremap <buffer> <localleader>v 0xx
+    " autocmd FileType javascript vnoremap <buffer> <localleader>c I// <esc>
+    " autocmd FileType javascript vnoremap <buffer> <localleader>v 0xx
+    " autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
+" augroup END
+
+" ruby config
+" augroup filetype_ruby
+    " autocmd!
+    " autocmd FileType ruby nnoremap <buffer> <localleader>c I# <esc>
+    " autocmd FileType ruby nnoremap <buffer> <localleader>v 0x
+    " autocmd FileType ruby vnoremap <buffer> <localleader>c I# <esc>
+    " autocmd FileType ruby vnoremap <buffer> <localleader>v 0x
+" augroup END
+
+" c config
+" autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
+" autocmd FileType c nnoremap <buffer> <localleader>v 0xx
+" autocmd FileType c vnoremap <buffer> <localleader>c I// <esc>
+" autocmd FileType c vnoremap <buffer> <localleader>v 0xx
+" autocmd FileType c :iabbrev <buffer> iff if ()<left>
+" autocmd FileType c :iabbrev <buffer> ret return
