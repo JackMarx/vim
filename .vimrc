@@ -105,16 +105,6 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-" vim config
-augroup filetype_vim
-	autocmd!
-	autocmd FileType vim nnoremap <buffer> <localleader>c I <esc>
-	autocmd FileType vim nnoremap <buffer> <localleader>v 0x
-	autocmd FileType vim vnoremap <buffer> <localleader>c I <esc>
-	autocmd FileType vim vnoremap <buffer> <localleader>v 0x
-
-augroup END
-
 " Vim table config
 let g:table_mode_header_fillchar='='
 
