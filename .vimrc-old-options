@@ -114,3 +114,15 @@
 " autocmd FileType c vnoremap <buffer> <localleader>v 0xx
 " autocmd FileType c :iabbrev <buffer> iff if ()<left>
 " autocmd FileType c :iabbrev <buffer> ret return
+
+" vim config
+augroup filetype_vim
+	autocmd!
+	autocmd FileType vim nnoremap <buffer> <localleader>c I <esc>
+	autocmd FileType vim nnoremap <buffer> <localleader>v 0x
+	autocmd FileType vim vnoremap <buffer> <localleader>c I <esc>
+	autocmd FileType vim vnoremap <buffer> <localleader>v 0x
+
+augroup END
+
+
